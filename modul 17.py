@@ -12,23 +12,23 @@ def merge_sort(array):
 
 def merge(left, right):
     result = []
-    i, j = 0, 0
+    a, b = 0, 0
 
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            result.append(left[i])
-            i += 1
+    while a < len(left) and b < len(right):
+        if left[a] < right[b]:
+            result.append(left[a])
+            a += 1
         else:
-            result.append(right[j])
-            j += 1
+            result.append(right[b])
+            b += 1
 
-    while i < len(left):
-        result.append(left[i])
-        i += 1
+    while a < len(left):
+        result.append(left[a])
+        a += 1
 
-    while j < len(right):
-        result.append(right[j])
-        j += 1
+    while b < len(right):
+        result.append(right[b])
+        b += 1
 
     return result
 
@@ -60,5 +60,5 @@ while True:
     except Exception:
         print("Неверный диапазон!")
 
-
+        
 print(binary_search(array, element, 0,  len(array)))
